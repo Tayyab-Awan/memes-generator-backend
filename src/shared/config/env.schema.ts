@@ -8,6 +8,8 @@ export const envSchema = z.object({
   PORT: z.coerce.number().int().positive().default(3000),
   DATABASE_URL: z.url({ protocol: /^postgres(ql)?$/ }),
   CLOUDINARY_URL: z.url({ protocol: /^cloudinary$/ }),
+  DOCS_USER: z.string().min(1).optional(),
+  DOCS_PASSWORD: z.string().min(8).optional(),
   CORS_ORIGIN: z
     .string()
     .default('http://localhost:5173')

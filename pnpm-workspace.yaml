@@ -1,6 +1,4 @@
-ignoredBuiltDependencies:
-  - '@parcel/watcher'
-  - '@scarf/scarf'
-
-onlyBuiltDependencies:
-  - esbuild
+allowBuilds:
+  '@parcel/watcher': false
+  '@scarf/scarf': false
+  esbuild: true
